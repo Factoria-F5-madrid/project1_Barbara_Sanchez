@@ -1,6 +1,6 @@
 # Proyecto Python: Taxímetro Digital
 
-<img src="./assets/taxi-7433597_1280.jpg" alt="drawing" style="width:100%; max-height:300px; object-fit:cover;" />
+<img src="./assets/taxi-7433597_1280.jpg" alt="drawing" style="width:100%; max-height:100px; object-fit:cover;" />
 
 ## Descripción del Proyecto
 Este proyecto consiste en desarrollar un prototipo de taxímetro digital utilizando Python. El objetivo es modernizar el sistema de facturación de los taxis y crear un sistema que calcule las tarifas a cobrar a los clientes de manera precisa y eficiente.
