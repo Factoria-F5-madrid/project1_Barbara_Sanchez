@@ -1,6 +1,6 @@
 # 🚕 Proyecto Python: Taxímetro Digital
 
-<img src="./assets/taxi-7433597_1280.jpg" alt="drawing" style="width:100%; max-height:100px; object-fit:cover;" />
+<img src="./assets/taxi-7433597_1280.jpg" alt="drawing" style="width:100%; max-height:30px; object-fit:cover;" />
 
 ## 📝 Descripción del Proyecto
 
