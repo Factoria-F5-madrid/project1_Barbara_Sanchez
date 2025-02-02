@@ -1,6 +1,7 @@
+
 # 🚕 Proyecto Python: Taxímetro Digital
 
-<img src="./assets/taxi-7433597_1280.jpg" alt="drawing" style="width:100%; max-height:30px; object-fit:cover;" />
+![Banner Proyectos](https://github.com/user-attachments/assets/bc6e34f7-4031-43dd-8cfc-805c935ba3c4)
 
 ## 📝 Descripción del Proyecto
 
