@@ -68,3 +68,16 @@ Dos semanas a partir de la fecha de inicio del proyecto.
 - Realiza pruebas frecuentes para asegurar el correcto funcionamiento en cada etapa.
 - Documenta tu código y mantén un registro de los cambios y decisiones de diseño.
 - Considera la usabilidad y la experiencia del usuario, incluso en la versión CLI.
+
+
+# ⚠️ Este repositorio es un fork
+
+Este repositorio fue creado como un **fork del proyecto original de Factoria F5**.
+
+Mi versión principal del proyecto, donde continúo trabajando activamente y que refleja mis contribuciones en GitHub, está aquí:
+
+👉 **[Ver repositorio actualizado](https://github.com/Barbarasanchez11/taximetro-BarbaraSanchez)**
+
+---
+
+Si quieres ver el desarrollo más reciente, el código actualizado y mis nuevas funcionalidades, por favor visita el enlace anterior.
