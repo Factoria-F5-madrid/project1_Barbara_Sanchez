@@ -1,1 +1,4 @@
-print("Bienvenido al sistema de taxímetro digital")
+from cli import main
+
+if __name__ == "__main__":
+    main()
