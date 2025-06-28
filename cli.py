@@ -1,3 +1,5 @@
+from taximeter import taxi
+
 def welcome():
     print("Bienvenido al sistema de taxímetro digital")
     print("Este programa permite calcular automáticamente la tarifa de un trayecto en taxi según el tiempo transcurrido y el estado del vehículo:")
@@ -14,6 +16,7 @@ def show_menu():
 
 def start_ride():
     print("Iniciando viaje")
+    taxi()
 
 def end_ride():
     print("Finalizando viaje")
