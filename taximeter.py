@@ -23,8 +23,7 @@ def total_price(move_time, stop_time):
 
 def taxi():
     print("Viaje iniciado")
-    print("Escribe 'p' para PARADO, 'm' para MOVIMIENTO o 'f' para FINALIZAR el trayecto")
-
+   
     move_time = 0
     stop_time = 0
     ride_active = True
