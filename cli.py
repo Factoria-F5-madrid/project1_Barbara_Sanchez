@@ -1,10 +1,15 @@
-def show_menu():
+def welcome():
     print("Bienvenido al sistema de taxímetro digital")
     print("Este programa permite calcular automáticamente la tarifa de un trayecto en taxi según el tiempo transcurrido y el estado del vehículo:")
+    print("-"*20)
+welcome()    
+
+
+def show_menu():
     print("1. Iniciar viaje")
     print("2. Finalizar viaje")
-    print("3. Mostrar información del viaje")
-    print("4. Salir")
+    print("3. Salir")
+    print("-"*20)
     return input("Seleccione una opción: ")
 
 def start_ride():
@@ -13,8 +18,6 @@ def start_ride():
 def end_ride():
     print("Finalizando viaje")
 
-def show_ride_info():
-    print("Mostrando información del viaje")
 
     
 def main():    
@@ -25,12 +28,10 @@ def main():
         elif option == "2":
             end_ride()
         elif option == "3":
-            show_ride_info()
-        elif option == "4":
-            print("Saliendo del programa")
+            print("Hasta pronto, gracias por usar el taxímetro")
             break
         else:
-            print("Opción inválida")
+            print("Opción inválida. Intentalo de nuevo")
 
 
 
