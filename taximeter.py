@@ -20,6 +20,12 @@ def pause(start_time, stop_time):
 def total_price(move_time, stop_time, price_move, price_stop):
     return (move_time * price_move) + (stop_time * price_stop)
 
+def save_trip_log(move_time, stop_time, total):
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    line = f"{now} | Movimiento: {round(move_time, 2)}s | Parado: {round(stop_time, 2)}s | Total: €{round(total, 2)}\n"
+    with open("historial.txt", "a", encoding="utf-8") as f:
+        f.write(line)
+
 
 def taxi():
     print("Viaje iniciado")
@@ -84,3 +90,4 @@ def taxi():
     total = total_price(move_time, stop_time, price_move, price_stop)
     print(f"Total: {round(total, 2)} €")
 
+    save_trip_log(move_time, stop_time, total)
