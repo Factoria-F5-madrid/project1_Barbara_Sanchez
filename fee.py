@@ -1,4 +1,3 @@
-# fee.py
 from datetime import datetime, time
 
 def get_dynamic_prices(current_time=None):
