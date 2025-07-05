@@ -58,7 +58,7 @@ def taxi():
             start_time = time.perf_counter()
 
             if state == "m":
-                next_state = input("Para moverse pulsa (p) y para finalizar trayecto (f)?: ").lower()
+                next_state = input("Para parar pulsa (p) y para finalizar trayecto (f)?: ").lower()
             elif state == "p":
                 next_state = input("Para moverse pulsa (m) y para finalizar trayecto (f)?: ").lower()
 
