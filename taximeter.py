@@ -12,17 +12,9 @@ logging.basicConfig(
 def move():
     return time.perf_counter()
 
-def stop(start_time, move_time):
+def measure_time(start_time, accumulated_time):
     end_time = time.perf_counter()
-    elapsed_time = end_time - start_time
-    move_time += elapsed_time
-    return elapsed_time, move_time
-
-def pause(start_time, stop_time):
-    end_time = time.perf_counter()
-    elapsed_time = end_time - start_time
-    stop_time += elapsed_time
-    return elapsed_time, stop_time
+    return accumulated_time + (end_time - start_time)
 
 def total_price(move_time, stop_time, price_move, price_stop):
     return (move_time * price_move) + (stop_time * price_stop)
@@ -48,7 +40,7 @@ def taxi():
 
     print(f"Hora actual: {current_time.strftime('%H:%M')}")
     print(f"Estado de demanda: {demand_status}")
-    print(f"Tarifas aplicadas:")
+    print(f"Tarifas:")
     print(f"   - Parado: €{price_stop:.2f}/s")
     print(f"   - Movimiento: {price_move:.2f}€/s ")
     
@@ -59,46 +51,43 @@ def taxi():
     stop_time = 0
     ride_active = True
 
-    state = input("¿Estado inicial del taxi? (p=parado, m=movimiento): ").lower()
+    state = input('Cómo está el taxi? (p=parado, m=movimiento): ').lower()
+    
     while ride_active:
-        if state == "m":
-            start_time = move()
-            logging.info("Estado cambiado a movimiento") 
-            while True:
-                cont = input("Presiona Enter para seguir en movimiento, 'p' para parar, 'f' para finalizar: ").lower()
-                if cont == "":
-                    continue
-                elif cont == "p":
-                    _, move_time = stop(start_time, move_time)
-                    logging.info("Cambio de estado: movimiento → parado")
-                    state = "p"
-                    break
-                elif cont == "f":
-                    _, move_time = stop(start_time, move_time)
-                    logging.info("Fin del trayecto desde movimiento")
-                    ride_active = False
-                    break
-        elif state == "p":
-            start_time = move()
-            logging.info("Estado cambiado a parado")
-            while True:
-                cont = input("Presiona Enter para seguir parado, 'm' para moverse, 'f' para finalizar: ").lower()
-                if cont == "":
-                    continue
-                elif cont == "m":
-                    _, stop_time = pause(start_time, stop_time)
-                    logging.info("Cambio de estado: parado → movimiento")
-                    state = "m"
-                    break
-                elif cont == "f":
-                    _, stop_time = pause(start_time, stop_time)
-                    logging.info("Fin del trayecto desde parado")
-                    ride_active = False
-                    break
+        if state in ('m', 'p'):
+            start_time = time.perf_counter()
+
+            if state == "m":
+                next_state = input("Para moverse pulsa (p) y para finalizar trayecto (f)?: ").lower()
+            elif state == "p":
+                next_state = input("Para moverse pulsa (m) y para finalizar trayecto (f)?: ").lower()
+
+            if next_state == 'f':
+                if state == 'm':
+                    move_time = measure_time(start_time, move_time)
+                else:
+                    stop_time = measure_time(start_time, stop_time)
+                logging.info('Trayecto finalizado por el usuario')
+                ride_active = False
+
+            elif next_state == 'p' and state == 'm':
+                move_time = measure_time(start_time, move_time)
+                logging.info('Cambio de estado: movimiento a parado')
+                state = 'p'
+
+            elif next_state == "m" and state == "p":
+                stop_time = measure_time(start_time, stop_time)
+                logging.info("Cambio de parado a movimiento")
+                state = 'm'
+
+            else:
+                print("Entrada no válida o sin cambio de estado.")
+                logging.warning(f"Entrada sin efecto o inválida: {next_state}")
+
         else:
-            logging.warning(f"Entrada no válida: '{state}'")
             print("Entrada no válida. Usa 'p', 'm' o 'f'.")
-            state = input("¿Estado del taxi? (p=parado, m=movimiento): ").lower()
+            logging.warning(f"Entrada inicial inválida: {state}")
+            state = input("Cómo está el taxi? (p=parado, m=movimiento): ").lower()
 
    
     print("Trayecto finalizado")
