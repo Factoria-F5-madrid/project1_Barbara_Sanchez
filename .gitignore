@@ -1,0 +1,23 @@
+# Entornos virtuales
+venv/
+.env/
+
+# Archivos Python compilados
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Archivos de log
+*.log
+
+# Archivos del sistema
+.DS_Store
+
+# Archivos de test
+.coverage
+htmlcov/
+.tox/
+
+# Otros
+*.sqlite3
+*.db
