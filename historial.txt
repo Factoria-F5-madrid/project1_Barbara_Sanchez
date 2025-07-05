@@ -1,1 +1,4 @@
 2025-07-02 19:29 | Movimiento: 9.05s | Parado: 7.61s | Total: €0.6
+2025-07-05 15:59 | Movimiento: 13.67s | Parado: 5.35s | Total: €0.79
+2025-07-05 16:09 | Movimiento: 6.03s | Parado: 10.15s | Total: €0.5
+2025-07-05 16:13 | Movimiento: 5.44s | Parado: 1.9s | Total: €0.31
