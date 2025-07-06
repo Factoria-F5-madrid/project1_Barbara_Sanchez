@@ -1,23 +1,27 @@
-# Entornos virtuales
+# Entorno virtual
 venv/
-.env/
 
-# Archivos Python compilados
+# Archivos de Python compilados
 __pycache__/
 *.py[cod]
 *.pyo
 
-# Archivos de log
+# Archivos de log o temporales
 *.log
+*.tmp
+*.swp
 
 # Archivos del sistema
 .DS_Store
+Thumbs.db
 
-# Archivos de test
-.coverage
-htmlcov/
-.tox/
+# Configuración de editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
 
-# Otros
-*.sqlite3
-*.db
+# Archivos de pruebas u ocultos
+.env
+.env.*
+*.bak
