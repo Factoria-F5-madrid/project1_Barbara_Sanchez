@@ -2,6 +2,9 @@ import streamlit as st
 from datetime import datetime
 import time
 from fee import get_dynamic_prices
+from db import create_table, save_trip, get_trip_history
+
+create_table()
 
 
 st.set_page_config(page_title="Taxímetro Digital", page_icon="🚖", layout="centered")
@@ -59,7 +62,7 @@ if not st.session_state['trayecto_iniciado'] and st.session_state['trayecto_fina
     st.markdown(f"- Tiempo total en movimiento: {int(st.session_state['move_time'])}s")
     st.markdown(f"- Tiempo total parado: {int(st.session_state['stop_time'])}s")
     total_cost = (st.session_state['move_time'] * price_move) + (st.session_state['stop_time'] * price_stop)
-    st.markdown(f"- Costo total: {round(total_cost, 2)}€")
+    st.markdown(f"- Precio total: {round(total_cost, 2)}€")
 
 else:
     col1, col2 = st.columns(2)
@@ -86,6 +89,8 @@ else:
                 elif st.session_state['has_moved']:
                     st.session_state['stop_time'] += elapsed_time
             total_cost = (st.session_state['move_time'] * price_move) + (st.session_state['stop_time'] * price_stop)
+            save_trip(st.session_state['move_time'], st.session_state['stop_time'], total_cost)
+
             st.write("Trayecto finalizado.")
             st.write(f"Tiempo total en movimiento: {int(st.session_state['move_time'])}s")
             st.write(f"Tiempo total parado: {int(st.session_state['stop_time'])}s")
@@ -134,3 +139,10 @@ if st.session_state['trayecto_iniciado']:
         tiempo_container.markdown(f"### Tiempo y Precio\n- Tiempo en movimiento: {int(move_time)}s\n- Tiempo parado: {int(stop_time)}s\n- Precio acumulado: {round(total_cost, 2)}€")
 
         time.sleep(1)
+
+st.markdown("---")
+st.subheader("Historial de trayectos")
+
+if st.button("Ver historial de trayectos"):
+    historial = get_trip_history()
+    st.dataframe(historial)        
