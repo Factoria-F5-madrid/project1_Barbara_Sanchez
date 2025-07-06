@@ -37,7 +37,7 @@ El proyecto está desarrollado utilizando **Python** como lenguaje principal y *
 - [Presentación Técnica](https://drive.google.com/file/d/1DBk5mtKim1hqhitJlRqkehqHjVwTSxUV/view?usp=sharing)
 - [Presentación No Técnica](https://drive.google.com/file/d/1u8R5Ey7MErLo8Z9vR2ZeW2RuzOdO8G4m/view?usp=sharing)
 - [Tablero de Trello](https://trello.com/b/ZAkd0zvG/taximetro)
-- [Aplicación Desplegada](https://trello.com/b/ZAkd0zvG/taximetro)
+- [Aplicación Desplegada](https://taximeterbarbarasanchez-9nwg8atis7aajwfbrghevy.streamlit.app/)
 
 ## Licencia
 
