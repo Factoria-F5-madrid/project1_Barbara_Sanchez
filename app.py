@@ -23,14 +23,16 @@ if 'has_moved' not in st.session_state:
 if 'trayecto_finalizado' not in st.session_state:
     st.session_state['trayecto_finalizado'] = False
 
-if not st.session_state['trayecto_iniciado']:
-    st.title("🚖 Taxímetro Digital")
-    st.markdown("## Bienvenido al sistema de taxímetro digital")
-    st.markdown("Esta aplicación te permite calcular automáticamente la tarifa de un trayecto en taxi según el tiempo transcurrido y el estado del vehículo.")
-else:
+if st.session_state['trayecto_finalizado']:
     st.title("🚖 Gracias por usar el Taxímetro Digital")
     st.markdown("## Esperamos verte pronto de nuevo.")
     st.markdown("Gracias por confiar en nuestro servicio.")
+
+    
+else:
+    st.title("🚖 Taxímetro Digital")
+    st.markdown("## Bienvenido al sistema de taxímetro digital")
+    st.markdown("Esta aplicación te permite calcular automáticamente la tarifa de un trayecto en taxi según el tiempo transcurrido y el estado del vehículo.")
 
 
 current_time = datetime.now().time()
@@ -42,7 +44,6 @@ demand_status = "HORA PUNTA" if is_peak else "hora baja"
 
 
 if not st.session_state['trayecto_iniciado'] and st.session_state['trayecto_finalizado']:
-    # Mostrar solo el botón "Iniciar trayecto" cuando el trayecto ha terminado
     if st.button("Iniciar trayecto"):
         st.session_state.update({
             'trayecto_iniciado': True,
@@ -53,8 +54,7 @@ if not st.session_state['trayecto_iniciado'] and st.session_state['trayecto_fina
             'estado_taxi': 'Parado',
             'has_moved': False
         })
-    
-    # Mostrar el ticket alineado a la izquierda
+        st.rerun()
     st.markdown("## **Ticket**")
     st.markdown(f"- Tiempo total en movimiento: {int(st.session_state['move_time'])}s")
     st.markdown(f"- Tiempo total parado: {int(st.session_state['stop_time'])}s")
@@ -62,7 +62,6 @@ if not st.session_state['trayecto_iniciado'] and st.session_state['trayecto_fina
     st.markdown(f"- Costo total: {round(total_cost, 2)}€")
 
 else:
-    # Lógica normal: mostrar ambos botones mientras está activo
     col1, col2 = st.columns(2)
     with col1:
         iniciar = st.button("Iniciar trayecto", disabled=st.session_state['trayecto_iniciado'])
