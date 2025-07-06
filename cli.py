@@ -17,14 +17,13 @@ def show_menu():
     
 def main():
 
-
-    
     welcome()
 
     while True:
         option = show_menu()
+       
 
-        if option == "1":
+        if option == "1":  
             taxi = Taximeter()
             taxi.start_ride()
         elif option == "2":
@@ -32,6 +31,8 @@ def main():
             break
         else:
             print("Opción inválida. Intenta de nuevo.")
-   
     
-main()
+
+if __name__ == "__main__":
+    main()
+    

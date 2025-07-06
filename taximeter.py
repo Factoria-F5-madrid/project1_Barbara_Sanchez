@@ -2,6 +2,7 @@ import time
 from datetime import datetime
 from fee import get_dynamic_prices
 import logging
+from uuid import uuid4
 
 logging.basicConfig(
     filename="taximeter.log",
@@ -11,6 +12,7 @@ logging.basicConfig(
 
 class Taximeter:
     def __init__(self):
+        self.ride_id = str(uuid4())
         self.move_time = 0
         self.stop_time = 0
         self.ride_active = True
@@ -31,6 +33,8 @@ class Taximeter:
 
 
     def start_ride(self):
+        
+
         print("Viaje iniciado")
         logging.info("Viaje iniciado")
 
