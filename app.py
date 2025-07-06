@@ -21,9 +21,15 @@ if 'has_moved' not in st.session_state:
     st.session_state['has_moved'] = False
 
 
-st.title("🚖 Taxímetro Digital")
-st.markdown("## Bienvenido al sistema de taxímetro digital")
-st.markdown("Esta aplicación te permite calcular automáticamente la tarifa de un trayecto en taxi según el tiempo transcurrido y el estado del vehículo.")
+# Mensaje de bienvenida o despedida
+if not st.session_state['trayecto_iniciado']:
+    st.title("🚖 Taxímetro Digital")
+    st.markdown("## Bienvenido al sistema de taxímetro digital")
+    st.markdown("Esta aplicación te permite calcular automáticamente la tarifa de un trayecto en taxi según el tiempo transcurrido y el estado del vehículo.")
+else:
+    st.title("🚖 Gracias por usar el Taxímetro Digital")
+    st.markdown("## Esperamos verte pronto de nuevo.")
+    st.markdown("Gracias por confiar en nuestro servicio.")
 
 
 current_time = datetime.now().time()
