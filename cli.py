@@ -1,4 +1,5 @@
 from taximeter import Taximeter
+from auth import authenticate
 
 
 def welcome():
@@ -16,6 +17,9 @@ def show_menu():
 
     
 def main():
+
+    if not authenticate():
+        return
 
     welcome()
 

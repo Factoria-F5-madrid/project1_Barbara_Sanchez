@@ -41,3 +41,8 @@
 2025-07-05 17:08:08,629 - INFO - Trayecto finalizado por el usuario
 2025-07-05 17:08:08,629 - INFO - Trayecto finalizado - Movimiento: 8.05s, Parado: 4.34s, Total: €0.69
 2025-07-05 17:08:08,631 - INFO - Trayecto guardado en historial.txt
+2025-07-06 13:13:38,292 - INFO - Viaje iniciado
+2025-07-06 13:13:38,293 - INFO - Tarifas - Parado: €0.02/s, Movimiento: €0.05/s
+2025-07-06 13:13:41,325 - INFO - Trayecto finalizado por el usuario
+2025-07-06 13:13:41,326 - INFO - Trayecto finalizado - Movimiento: 0.99s, Parado: 0s, Total: €0.05
+2025-07-06 13:13:41,330 - INFO - Trayecto guardado en historial.txt
