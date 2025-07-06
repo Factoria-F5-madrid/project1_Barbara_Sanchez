@@ -37,10 +37,10 @@ demand_status = "HORA PUNTA" if is_peak else "hora baja"
 st.header("Control del Trayecto")
 col1, col2 = st.columns(2)
 with col1:
-    iniciar = st.button("Iniciar trayecto")
+    iniciar = st.button("Iniciar trayecto", disabled=st.session_state['trayecto_iniciado'])
     if iniciar:
         st.session_state['trayecto_iniciado'] = True
-        st.session_state['start_time'] = None 
+        st.session_state['start_time'] = None  # No iniciar el tiempo hasta que se mueva
         st.session_state['move_time'] = 0
         st.session_state['stop_time'] = 0
         st.session_state['estado_taxi'] = 'Parado'
