@@ -7,3 +7,9 @@
 2025-07-05 16:49 | Movimiento: 29.35s | Parado: 0s | Total: €1.47
 2025-07-05 16:54 | Movimiento: 0s | Parado: 2.58s | Total: €0.05
 2025-07-05 17:08 | Movimiento: 8.05s | Parado: 4.34s | Total: €0.69
+2025-07-06 10:53 | Movimiento: 5.29s | Parado: 2.49s | Total: €0.31
+2025-07-06 11:32 | Movimiento: 4.58s | Parado: 1.1s | Total: €0.25
+2025-07-06 11:32 | Movimiento: 2.66s | Parado: 0s | Total: €0.13
+2025-07-06 11:45 | Movimiento: 3.05s | Parado: 0s | Total: €0.15
+2025-07-06 11:47 | Movimiento: 0s | Parado: 1.51s | Total: €0.03
+2025-07-06 11:47 | Movimiento: 3.9s | Parado: 0s | Total: €0.19
