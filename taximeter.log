@@ -46,3 +46,24 @@
 2025-07-06 13:13:41,325 - INFO - Trayecto finalizado por el usuario
 2025-07-06 13:13:41,326 - INFO - Trayecto finalizado - Movimiento: 0.99s, Parado: 0s, Total: €0.05
 2025-07-06 13:13:41,330 - INFO - Trayecto guardado en historial.txt
+2025-07-06 20:26:19,704 - INFO - Viaje iniciado
+2025-07-06 20:26:19,706 - INFO - Tarifas - Parado: €0.02/s, Movimiento: €0.05/s
+2025-07-06 20:26:31,132 - INFO - Cambio de estado: movimiento a parado
+2025-07-06 20:26:33,658 - INFO - Cambio de parado a movimiento
+2025-07-06 20:26:36,269 - INFO - Trayecto finalizado por el usuario
+2025-07-06 20:26:36,269 - INFO - Trayecto finalizado - Movimiento: 6.65s, Parado: 2.53s, Total: €0.38
+2025-07-06 20:26:36,271 - INFO - Trayecto guardado en historial.txt
+2025-07-06 20:34:51,066 - INFO - Viaje iniciado
+2025-07-06 20:34:51,068 - INFO - Tarifas - Parado: €0.02/s, Movimiento: €0.05/s
+2025-07-06 20:38:31,541 - INFO - Viaje iniciado
+2025-07-06 20:38:31,542 - INFO - Tarifas - Parado: €0.02/s, Movimiento: €0.05/s
+2025-07-06 20:38:57,132 - INFO - Cambio de estado: movimiento a parado
+2025-07-06 20:39:03,225 - INFO - Cambio de parado a movimiento
+2025-07-06 20:39:08,206 - INFO - Trayecto finalizado por el usuario
+2025-07-06 20:39:08,207 - INFO - Trayecto finalizado - Movimiento: 13.13s, Parado: 6.09s, Total: €0.78
+2025-07-06 20:39:08,209 - INFO - Trayecto guardado en historial.txt
+2025-07-06 20:39:25,492 - INFO - Viaje iniciado
+2025-07-06 20:39:25,493 - INFO - Tarifas - Parado: €0.02/s, Movimiento: €0.05/s
+2025-07-06 20:39:33,373 - INFO - Trayecto finalizado por el usuario
+2025-07-06 20:39:33,374 - INFO - Trayecto finalizado - Movimiento: 3.11s, Parado: 0s, Total: €0.16
+2025-07-06 20:39:33,374 - INFO - Trayecto guardado en historial.txt

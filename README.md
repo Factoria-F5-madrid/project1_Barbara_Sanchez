@@ -1,73 +1,57 @@
+# 🚕 Taxímetro Digital
 
-# 🚕 Proyecto Python: Taxímetro Digital
+## Descripción
 
-![Banner Proyectos](https://github.com/user-attachments/assets/bc6e34f7-4031-43dd-8cfc-805c935ba3c4)
+El **Taxímetro Digital** es una aplicación diseñada para calcular automáticamente la tarifa de un trayecto en taxi según el tiempo transcurrido y el estado del vehículo. Ofrece una interfaz intuitiva para gestionar el inicio y finalización de trayectos, mostrando tarifas dinámicas y un historial de viajes.
 
-## 📝 Descripción del Proyecto
+## Instalación y Uso Local
 
-Este proyecto consiste en desarrollar un prototipo de taxímetro digital utilizando Python. El objetivo es modernizar el sistema de facturación de los taxis y crear un sistema que calcule las tarifas a cobrar a los clientes de manera precisa y eficiente.
+1. **Clonar el repositorio**:
+   ```bash
+   git clone https://github.com/Barbarasanchez11/taximeter_Barbara_Sanchez
+   cd taximetro-digital
+   ```
 
-## 📊 Niveles de Implementación
+2. **Instalar dependencias**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 🟢 Nivel Esencial
+3. **Ejecutar la aplicación**:
+   ```bash
+   streamlit run app.py
+   ```
+   
+   También puedes ejecutar la aplicación desde la línea de comandos:
+   ```bash
+   python main.py
+   ```
 
-Desarrollar un programa CLI (Interfaz de Línea de Comandos) en Python.
+## Desarrollo del Proyecto
 
-- Al iniciar, el programa debe dar la bienvenida y explicar su funcionamiento.
-- Implementar las siguientes funcionalidades básicas:
-  - Iniciar un trayecto.
-  - Calcular tarifa mientras el taxi está parado (2 céntimos por segundo).
-  - Calcular tarifa mientras el taxi está en movimiento (5 céntimos por segundo).
-  - Finalizar un trayecto y mostrar el total en euros.
-  - Permitir iniciar un nuevo trayecto sin cerrar el programa.
+El proyecto está desarrollado utilizando **Python** como lenguaje principal y **Streamlit** para la creación de la interfaz web. Se utiliza **SQLite** para almacenar el historial de trayectos. La aplicación está diseñada para ser fácil de usar, con una interfaz que cambia dinámicamente entre mensajes de bienvenida y despedida según el estado del trayecto.
 
-### 🟡 Nivel Medio
+## Presentaciones y Recursos
 
-- Implementar un sistema de logs para la trazabilidad del código.
-- Agregar tests unitarios para asegurar el correcto funcionamiento del programa.
-- Crear un registro histórico de trayectos pasados en un archivo de texto plano.
-- Permitir la configuración de precios para adaptarse a la demanda actual.
+- [Video de la Presentación](https://drive.google.com/file/d/1PUEliao7GZgfDvu9xkDh_rseVvrtWO0e/view?usp=sharing)
+- [Presentación Técnica](https://drive.google.com/file/d/1DBk5mtKim1hqhitJlRqkehqHjVwTSxUV/view?usp=sharing)
+- [Presentación No Técnica](https://drive.google.com/file/d/1u8R5Ey7MErLo8Z9vR2ZeW2RuzOdO8G4m/view?usp=sharing)
+- [Tablero de Trello](https://trello.com/b/ZAkd0zvG/taximetro)
+- [Aplicación Desplegada](https://trello.com/b/ZAkd0zvG/taximetro)
 
-### 🟠 Nivel Avanzado
+## Licencia
 
-- Refactorizar el código utilizando un enfoque orientado a objetos (OOP).
-- Implementar un sistema de autenticación con contraseñas para proteger el acceso al programa.
-- Desarrollar una interfaz gráfica de usuario (GUI) para hacer el programa más amigable.
+Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo `LICENSE`.
 
-### 🔴 Nivel Experto
+## Autor
 
-- Integrar una base de datos para almacenar los registros de trayectos pasados.
-- Dockerizar la aplicación para facilitar su despliegue y portabilidad.
-- Desarrollar una versión web de la aplicación accesible a través de internet.
+- **Bárbara Sánchez**: [GitHub](https://github.com/Barbarasanchez11)
 
-## 🛠️ Tecnologías a Utilizar
+## Documentación y Fuentes
 
-- Python
-- Git y GitHub para control de versiones
-- Trello o Jira para la gestión del proyecto
-- Bibliotecas adicionales según el nivel de implementación (por ejemplo, logging, unittest, tkinter para GUI, SQLite para base de datos)
-- Docker para containerización (nivel experto)
-- Framework web como Flask o Django para la versión web (nivel experto)
-
-## 📦 Entregables
-
-- Repositorio de GitHub con el código fuente del proyecto.
-- Demostración del CLI desarrollado.
-- Presentación para público no técnico.
-- Presentación técnica del código, destacando fortalezas y debilidades.
-- Enlace al tablero Kanban utilizado para la organización del proyecto.
-
-## ⏳ Plazo de Entrega
-
-Dos semanas a partir de la fecha de inicio del proyecto.
-
-## 💡 Consejos para el Desarrollo
-
-- Comienza con el nivel esencial y ve agregando funcionalidades gradualmente.
-- Utiliza control de versiones desde el inicio del proyecto.
-- Realiza pruebas frecuentes para asegurar el correcto funcionamiento en cada etapa.
-- Documenta tu código y mantén un registro de los cambios y decisiones de diseño.
-- Considera la usabilidad y la experiencia del usuario, incluso en la versión CLI.
+- [Documentación oficial de Python](https://docs.python.org/3/)
+- [PEP 8 – Guía de estilo de Python](https://peps.python.org/pep-0008/)
+- [Streamlit](https://docs.streamlit.io/)
 
 
 

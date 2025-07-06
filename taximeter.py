@@ -2,7 +2,7 @@ import time
 from datetime import datetime
 from fee import get_dynamic_prices
 import logging
-from uuid import uuid4
+
 
 logging.basicConfig(
     filename="taximeter.log",
@@ -12,7 +12,6 @@ logging.basicConfig(
 
 class Taximeter:
     def __init__(self):
-        self.ride_id = str(uuid4())
         self.move_time = 0
         self.stop_time = 0
         self.ride_active = True
@@ -26,7 +25,7 @@ class Taximeter:
 
     def save_trip_log(self, move_time, stop_time, total):
         now = datetime.now().strftime("%Y-%m-%d %H:%M")
-        line = f"{now} | Movimiento: {round(self.move_time, 2)}s | Parado: {round(self.stop_time, 2)}s | Total: €{round(total, 2)}\n"
+        line = f"{now} | Movimiento: {round(self.move_time, 2)}s | Parado: {round(self.stop_time, 2)}s | Total: {round(total, 2)}\n€"
         with open("historial.txt", "a", encoding="utf-8") as f:
             f.write(line)
         logging.info("Trayecto guardado en historial.txt")   
@@ -46,7 +45,7 @@ class Taximeter:
         print(f"Hora actual: {self.current_time.strftime('%H:%M')}")
         print(f"Estado de demanda: {demand_status}")
         print(f"Tarifas:")
-        print(f"   - Parado: €{self.price_stop:.2f}/s")
+        print(f"   - Parado: {self.price_stop:.2f}€/s")
         print(f"   - Movimiento: {self.price_move:.2f}€/s ")
     
         logging.info(f"Tarifas - Parado: €{self.price_stop:.2f}/s, Movimiento: €{self.price_move:.2f}/s")
