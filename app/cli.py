@@ -1,5 +1,5 @@
-from taximeter import Taximeter
-from auth import authenticate
+from app.taximeter import Taximeter
+from app.auth import authenticate
 
 
 def welcome():

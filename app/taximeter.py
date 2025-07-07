@@ -1,11 +1,17 @@
 import time
 from datetime import datetime
-from fee import get_dynamic_prices
+from app.fee import get_dynamic_prices
 import logging
+import os
 
 
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+
+log_path = os.path.join(DATA_DIR, "taximeter.log")
 logging.basicConfig(
-    filename="taximeter.log",
+    filename=log_path,
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
@@ -26,7 +32,9 @@ class Taximeter:
     def save_trip_log(self, move_time, stop_time, total):
         now = datetime.now().strftime("%Y-%m-%d %H:%M")
         line = f"{now} | Movimiento: {round(self.move_time, 2)}s | Parado: {round(self.stop_time, 2)}s | Total: {round(total, 2)}\n€"
-        with open("historial.txt", "a", encoding="utf-8") as f:
+        
+        historial_path = os.path.join(DATA_DIR, "historial.txt")
+        with open(historial_path, "a", encoding="utf-8") as f:
             f.write(line)
         logging.info("Trayecto guardado en historial.txt")   
 

@@ -1,7 +1,7 @@
 import unittest
 from datetime import time
-from fee import get_dynamic_prices
-from taximeter import total_price
+from app.fee import get_dynamic_prices
+from app.taximeter import total_price
 
 class TestFeeLogic(unittest.TestCase):
     def test_peak_morning(self):

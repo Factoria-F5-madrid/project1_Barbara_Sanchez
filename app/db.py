@@ -1,6 +1,13 @@
 import sqlite3
 from datetime import datetime
 import pandas as pd
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+
+db_path = os.path.join(DATA_DIR, "trips.db")
+conn = sqlite3.connect(db_path)
 
 def get_connection():
     return sqlite3.connect("trips.db", check_same_thread=False)

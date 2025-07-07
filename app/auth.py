@@ -1,7 +1,12 @@
 import json
+import os
 from getpass import getpass
 
-def load_users(file_path="users.json"):
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+USERS_FILE = os.path.join(DATA_DIR, "users.json")
+
+def load_users(file_path=USERS_FILE):
     try:
         with open(file_path, "r", encoding="utf-8") as f:
             original_users = json.load(f)
