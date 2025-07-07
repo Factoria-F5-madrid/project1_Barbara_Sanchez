@@ -78,5 +78,36 @@ Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archiv
 - [PEP 8 – Guía de estilo de Python](https://peps.python.org/pep-0008/)
 - [Streamlit](https://docs.streamlit.io/)
 
+## Dockerización
+
+Debido a limitaciones técnicas específicas del entorno local, no fue posible ejecutar Docker correctamente en este sistema. El entorno de desarrollo cuenta con:
+
+- macOS 12 (versión fuera del soporte oficial de Homebrew, "Tier 3")
+- Python 3.13 (versión muy reciente con incompatibilidades en scripts de construcción de QEMU)
+
+Durante la instalación del entorno necesario para ejecutar Docker (Colima + QEMU), ocurrió el siguiente error al llegar a QEMU:
+
+```
+AttributeError: module 'pip._vendor.distlib' has no attribute 'scripts'
+ERROR: python venv creation failed
+```
+
+Este error es conocido y ha sido reportado en múltiples foros, ya que QEMU no soporta correctamente la creación de entornos virtuales con Python 3.13 aún.
+
+Si el sistema hubiera estado basado en Python 3.10 o 3.11 y un macOS más reciente (13+), el entorno Docker podría haberse ejecutado sin inconvenientes.
+
+### Instrucciones para ejecutar con Docker en otro entorno compatible
+
+Una vez clonado el repositorio:
+
+```bash
+docker build -t taximeter-app .
+docker run -p 8501:8501 taximeter-app
+```
+
+Y acceder a la aplicación desde el navegador en:
+
+[http://localhost:8501](http://localhost:8501)
+
 
 
