@@ -52,7 +52,7 @@ El proyecto está desarrollado principalmente en **Python**, utilizando **Stream
 - [Presentación Técnica](https://drive.google.com/file/d/1DBk5mtKim1hqhitJlRqkehqHjVwTSxUV/view?usp=sharing)
 - [Presentación No Técnica](https://drive.google.com/file/d/1u8R5Ey7MErLo8Z9vR2ZeW2RuzOdO8G4m/view?usp=sharing)
 - [Tablero de Trello](https://trello.com/b/ZAkd0zvG/taximetro)
-- [Aplicación Desplegada](https://taximeterbarbarasanchez-9nwg8atis7aajwfbrghevy.streamlit.app/)
+- [Aplicación Desplegada](https://barbarasanchez11-taximeter-project-appapp-s2mysf.streamlit.app/)
 
 ## Contribuciones
 
